@@ -63,3 +63,7 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 
 * sha256sum: calcula y comprueba el resumen del mensaje SHA256 de tipo SHA-2.
 * sha5122sum: calcula y comprueba el resumen del mensaje SHA512 de tipo SHA-2.
+
+## Referencias
+
+* [https://www.redeszone.net/tutoriales/seguridad/comprobar-integridad-archivos-hash/](https://www.redeszone.net/tutoriales/seguridad/comprobar-integridad-archivos-hash/)
