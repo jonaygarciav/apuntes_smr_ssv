@@ -53,6 +53,7 @@ La clave SHA-256 se encuentra en el archivo que se puede descargar en la URL:
 cuyo contenido es el siguiente:
 
 ```bash:alpine-standard-3.18.3-x86_64.iso.sha256
+# Contenido del fichero alpine-standard-3.18.3-x86_64.iso.sha256
 badeb7f57634c22dbe947bd692712456f2daecd526c14270355be6ee5e73e83e  alpine-standard-3.18.3-x86_64.iso
 ```
 
