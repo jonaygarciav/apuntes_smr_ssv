@@ -63,7 +63,7 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 
 ## Ejemplo práctico 2
 
-En este ejemplo, descaremos en nuestro ordenador, aparte del fichero .iso llamado alpine-standard-3.18.3-x86_64.iso, el archivo con la clave hash llamado alpine-standard-3.18.3-x86_64.iso.sha256:
+En este ejemplo, descargaremos en nuestro ordenador, aparte del fichero con extensión ISO llamado alpine-standard-3.18.3-x86_64.iso, el archivo con la clave hash llamado alpine-standard-3.18.3-x86_64.iso.sha256:
 
 * [https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso)
 * [https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256)
