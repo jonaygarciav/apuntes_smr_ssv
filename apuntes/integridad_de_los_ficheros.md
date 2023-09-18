@@ -28,6 +28,8 @@ Estas funciones matemáticas, son tremendamente útiles para producir valores ú
 * __SHA-2__: En este caso estamos ante un grupo de algoritmos, los cuales pueden producir hashes de diferentes longitudes. Tenemos 224, 256, 384 y 512 bits respectivamente. Esta ha reemplazado en gran medida a MD5 y SHA-1, como una opción mucho más segura. Es muy utilizado en la verificación de contraseñas e integridad.
 * __SHA-3__: Este algoritmo es capaz de producir hashes de 224, 256, 384 y 512 bits. Y es actualmente uno de los algoritmos aprobados por el Instituto Nacional de los Estándares y Tecnología (NIST) de Estados Unidos. Es considerado muy seguro, por lo cual también es ampliamente utilizado.
 
+## Ejemplo práctico 1
+
 Por ejemplo, imaginemos que hemos descargado un archivo llamado alpine-standard-3.18.3-x86_64.iso ubicado en la URL:
 
 [https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso)
@@ -59,12 +61,48 @@ badeb7f57634c22dbe947bd692712456f2daecd526c14270355be6ee5e73e83e  alpine-standar
 
 Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de la página web. En caso de que no coincidieran las claves, sería necesario volver a descargar el archivo hasta que las claves hash coincidan.
 
+## Ejemplo práctico 2
+
+En este ejemplo, descaremos en nuestro ordenador, aparte del fichero .iso llamado alpine-standard-3.18.3-x86_64.iso, el archivo con la clave hash llamado alpine-standard-3.18.3-x86_64.iso.sha256:
+
+* [https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso)
+* [https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256)
+
+Descargaremos estos archivos desde la línea de comandos utilizando el comando wget:
+
+```bash
+$ cd Descargas
+
+$ wget https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso
+$ wget https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256
+```
+
+El archivo alpine-standard-3.18.3-x86_64.iso.sha256 es un archivo de texto y podemos ver su contenido desde la terminal utilizando el comando cat:
+
+```bash
+$ cat alpine-standard-3.18.3-x86_64.iso.sha256
+badeb7f57634c22dbe947bd692712456f2daecd526c14270355be6ee5e73e83e  alpine-standard-3.18.3-x86_64.iso
+```
+
+Ahora utilizaremos el hash almacenado en el archivo sh almacenado en el archivo alpine-standard-3.18.3-x86_64.iso.sha256 , para verificar la integridad del archivo alpine-standard-3.18.3-x86_64.iso que hemos descargado:
+
+```bash
+$ sha256sum --check alpine-standard-3.18.3-x86_64.iso.sha256 alpine-standard-3.18.3-x86_64.iso
+alpine-standard-3.18.3-x86_64.iso: La suma coincide
+```
+
+Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de la página web. En caso de que no coincidieran las claves, sería necesario volver a descargar el archivo hasta que las claves hash coincidan.
+
+> Nota: Esta es una manera más limpia de comprobar la integridad de un archivo, utilizando la opción --check con el comando sha256sum o sha512sum.
+
 ## Comandos
 
 * sha256sum: calcula y comprueba el resumen del mensaje SHA256 de tipo SHA-2.
 * sha5122sum: calcula y comprueba el resumen del mensaje SHA512 de tipo SHA-2.
+* wget: permite descargar archivos de Internet.
 
 ## Referencias
 
 * [https://www.redeszone.net/tutoriales/seguridad/comprobar-integridad-archivos-hash/](https://www.redeszone.net/tutoriales/seguridad/comprobar-integridad-archivos-hash/)
 * [https://linuxmint-installation-guide.readthedocs.io/es/latest/verify.html](https://linuxmint-installation-guide.readthedocs.io/es/latest/verify.html)
+* [https://www.ochobitshacenunbyte.com/2023/01/03/como-generar-un-hash-sha-256-en-linux/](https://www.ochobitshacenunbyte.com/2023/01/03/como-generar-un-hash-sha-256-en-linux/)
