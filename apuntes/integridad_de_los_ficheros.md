@@ -67,3 +67,4 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 ## Referencias
 
 * [https://www.redeszone.net/tutoriales/seguridad/comprobar-integridad-archivos-hash/](https://www.redeszone.net/tutoriales/seguridad/comprobar-integridad-archivos-hash/)
+* [https://linuxmint-installation-guide.readthedocs.io/es/latest/verify.html](https://linuxmint-installation-guide.readthedocs.io/es/latest/verify.html)
