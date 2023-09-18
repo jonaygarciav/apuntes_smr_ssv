@@ -35,7 +35,7 @@ Por ejemplo, imaginemos que hemos descargado un archivo llamado alpine-standard-
 [https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso)
 
 
-Este archivo se encuentra ubicado en la carpeta Descargas de nuestro directorio personal y queremos calcular su hash y compararlo con el que se encuentra en la página web para comprobar la integridad del archivo, por lo tanto, debemos abrir un Terminal (CTRL+ALT+N) y ejecutar los siguientes comandos:
+Este archivo se encuentra ubicado en la carpeta Descargas de nuestro directorio personal y queremos calcular su hash y compararlo con el que se encuentra en la página web para comprobar la integridad del archivo, por lo tanto, debemos abrir un Terminal (CTRL+ALT+T) y ejecutar los siguientes comandos:
 
 ```bash
 $ cd Descargas
