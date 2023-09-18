@@ -99,6 +99,7 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 
 * sha256sum: calcula y comprueba el resumen del mensaje SHA256 de tipo SHA-2.
 * sha5122sum: calcula y comprueba el resumen del mensaje SHA512 de tipo SHA-2.
+* ls -l: lista los archivos y carpetas del directorio en que nos encontramos actualmente.
 * wget: permite descargar archivos de Internet.
 
 ## Referencias
