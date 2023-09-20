@@ -94,6 +94,10 @@ Ahora utilizaremos el hash almacenado en el archivo sh almacenado en el archivo 
 ```bash
 $ cat alpine-standard-3.18.3-x86_64.iso.sha256 | sha256sum --check
 alpine-standard-3.18.3-x86_64.iso: La suma coincide
+
+# Otra manera de hacer lo mismo
+$ sha256sum -c alpine-standard-3.18.3-x86_64.iso.sha256 2>/dev/null | grep alpine-standard-3.18.3-x86_64.iso
+alpine-standard-3.18.3-x86_64.iso.sha256: La suma coincide
 ```
 
 Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de la página web. En caso de que no coincidieran las claves, sería necesario volver a descargar el archivo hasta que las claves hash coincidan.
