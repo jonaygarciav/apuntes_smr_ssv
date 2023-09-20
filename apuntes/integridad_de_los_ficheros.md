@@ -1,4 +1,4 @@
-# Cómo comprobar la integridad de nuestros archivos con el hash
+# Comprobar la integridad de nuestros archivos mediante MD5, SHA-1 o SHA-2
 
 ¿Cómo es posible saber fácilmente si el archivo que estoy recibiendo es legítimo? ¿Es posible saber si se ha corrompido mientras lo descargaba de Internet? Sí, es posible mediante su hash. El hash funciona como un código de identificación del dato con el cual estamos trabajando. Si llega a alterarse un determinado dato de origen, este código alfanumérico de salida se altera por completo. A continuación, te mostramos todo lo que necesitas saber y qué herramientas recomendamos para generar hashes cuando lo necesites.
 
