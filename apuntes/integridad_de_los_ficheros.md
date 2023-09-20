@@ -77,7 +77,6 @@ $ wget https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standa
 $ wget https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256
 
 $ ls -l
-jonay@samba:~/ssv1/isos/alpine/3.18.3$ ls -l
 total 193544
 -rw-r--r-- 1 jonay jonay 198180864 ago  7 14:13 alpine-standard-3.18.3-x86_64.iso
 -rw-r--r-- 1 jonay jonay       100 ago  7 14:13 alpine-standard-3.18.3-x86_64.iso.sha256
