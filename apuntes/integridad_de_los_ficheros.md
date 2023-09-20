@@ -75,6 +75,12 @@ $ cd Descargas
 
 $ wget https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso
 $ wget https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256
+
+$ ls -l
+jonay@samba:~/ssv1/isos/alpine/3.18.3$ ls -l
+total 193544
+-rw-r--r-- 1 jonay jonay 198180864 ago  7 14:13 alpine-standard-3.18.3-x86_64.iso
+-rw-r--r-- 1 jonay jonay       100 ago  7 14:13 alpine-standard-3.18.3-x86_64.iso.sha256
 ```
 
 El archivo alpine-standard-3.18.3-x86_64.iso.sha256 es un archivo de texto y podemos ver su contenido desde la terminal utilizando el comando cat:
@@ -87,7 +93,7 @@ badeb7f57634c22dbe947bd692712456f2daecd526c14270355be6ee5e73e83e  alpine-standar
 Ahora utilizaremos el hash almacenado en el archivo sh almacenado en el archivo alpine-standard-3.18.3-x86_64.iso.sha256 , para verificar la integridad del archivo alpine-standard-3.18.3-x86_64.iso que hemos descargado:
 
 ```bash
-$ sha256sum --check alpine-standard-3.18.3-x86_64.iso.sha256 alpine-standard-3.18.3-x86_64.iso
+$ cat alpine-standard-3.18.3-x86_64.iso.sha256 | sha256sum --check
 alpine-standard-3.18.3-x86_64.iso: La suma coincide
 ```
 
@@ -97,10 +103,11 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 
 ## Comandos
 
-* sha256sum: calcula y comprueba el resumen del mensaje SHA256 de tipo SHA-2.
-* sha5122sum: calcula y comprueba el resumen del mensaje SHA512 de tipo SHA-2.
-* ls -l: lista los archivos y carpetas del directorio en que nos encontramos actualmente.
-* wget: permite descargar archivos de Internet.
+* _sha256sum_: calcula y comprueba el resumen del mensaje SHA256 de tipo SHA-2.
+* _sha512sum_: calcula y comprueba el resumen del mensaje SHA512 de tipo SHA-2.
+* _ls -l_: lista los archivos y carpetas del directorio en que nos encontramos actualmente.
+* _wget_: permite descargar archivos de Internet.
+* _cat_: muestra el contenido de un fichero de texto.
 
 ## Referencias
 
