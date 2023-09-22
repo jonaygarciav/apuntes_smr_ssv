@@ -44,7 +44,7 @@ $ wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.1.0-a
 $ wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS
 ```
 
-Estos archivos se encuentran ubicados en la carpeta _Descargas_ de nuestro directorio personal:
+Una vez descargados, estos archivos se encuentran ubicados en la carpeta _Descargas_ de nuestro directorio personal:
 
 ```bash
 $ pwd
