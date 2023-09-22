@@ -28,7 +28,7 @@ Estas funciones matemáticas, son tremendamente útiles para producir valores ú
 * __SHA-2__: En este caso estamos ante un grupo de algoritmos, los cuales pueden producir hashes de diferentes longitudes. Tenemos 224, 256, 384 y 512 bits respectivamente. Esta ha reemplazado en gran medida a MD5 y SHA-1, como una opción mucho más segura. Es muy utilizado en la verificación de contraseñas e integridad.
 * __SHA-3__: Este algoritmo es capaz de producir hashes de 224, 256, 384 y 512 bits. Y es actualmente uno de los algoritmos aprobados por el Instituto Nacional de los Estándares y Tecnología (NIST) de Estados Unidos. Es considerado muy seguro, por lo cual también es ampliamente utilizado.
 
-## Ejemplo práctico 1
+## Ejemplo práctico
 
 Por ejemplo, imaginemos que entramos en la página de descarga de Debian [https://www.debian.org/download](https://www.debian.org/download) se encuentra los siguientes archivos:
 
