@@ -65,7 +65,7 @@ $ sha512sum debian-12.1.0-amd64-netinst.iso
 9da6ae5b63a72161d0fd4480d0f090b250c4f6bf421474e4776e82eea5cb3143bf8936bf43244e438e74d581797fe87c7193bbefff19414e33932fe787b1400f  debian-12.1.0-amd64-netinst.iso
 ```
 
-El archivo _SHA512SUMS_ contiene la clave hash del archivo _debian-12.1.0-amd64-netinst.iso_ entre otros:
+El archivo _SHA512SUMS_ contiene la clave hash del archivo _debian-12.1.0-amd64-netinst.iso_ entre otros. Mostramos el contenido del archivo _SHA512SUMS_ con el comando __cat__:
 
 ```bash
 $ cat SHA512SUMS 
