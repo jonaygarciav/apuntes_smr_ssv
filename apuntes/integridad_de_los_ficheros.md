@@ -85,13 +85,12 @@ sha512sum: debian-mac-12.1.0-amd64-netinst.iso: No existe el fichero o el direct
 debian-mac-12.1.0-amd64-netinst.iso: FAILED open or read
 ```
 
-> Nota: En el archivo _SHA512SUMS_ se encuentran los hash de los archivos _debian-12.1.0-amd64-netinst.iso_, _debian-edu-12.1.0-amd64-netinst.iso_ y _debian-mac-12.1.0-amd64-netinst.iso_ de los cuales solamente hemos descargado el primero, de ahí que aparezcan esos errores en la terminal.
+> Nota: En el archivo _SHA512SUMS_ se encuentran los hash de los archivos _debian-12.1.0-amd64-netinst.iso_, _debian-edu-12.1.0-amd64-netinst.iso_ y _debian-mac-12.1.0-amd64-netinst.iso_ de los cuales solamente hemos descargado el primero, de ahí que aparezcan algunos errores en la terminal.
 
 Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de la página de descargas de Debian. En caso de que no coincidieran las claves, sería necesario volver a descargar el archivo hasta que las claves hash coincidan.
 
 
 ## Comprobar la autenticidad de los archivos
-
 
 
 ## Comandos
