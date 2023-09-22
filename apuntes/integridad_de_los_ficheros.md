@@ -74,7 +74,7 @@ a75265fcbb50908b5b61d533d85893552a5a0c826050795368d17b632378da29effe2665804cbc52
 1d59635d33a3b31ebd31f13c8e2531625aa17310ae271e2b17215ea88c3daee8cd520491ec72870542cc9e5f4d633d63b6a1da2ddb81970daff1245224e881ce  debian-mac-12.1.0-amd64-netinst.iso
 ```
 
-Lo que queremos es calcular el hash del archivo _debian-12.1.0-amd64-netinst.iso_ y compararlo con el que se encuentra dentro del fichero _SHA512SUMS_ para comprobar la integridad del archivo. Para ello, utilizamos el comando __sha512sum__ con la opción _--check_:
+Lo que queremos es calcular el hash del archivo _debian-12.1.0-amd64-netinst.iso_ y compararlo con el que se encuentra dentro del fichero _SHA512SUMS_ para comprobar su integridad: que el fichero descargado es exactamente el mismo que el nos descargamos de Internet. Para ello, utilizamos el comando __sha512sum__ con la opción _--check_:
 
 ```bash
 $ sha512sum --check SHA512SUMS
