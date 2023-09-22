@@ -1,4 +1,4 @@
-# Comprobar la integridad de nuestros archivos mediante MD5, SHA-1 o SHA-2
+# Comprobar la integridad y la autenticidad de archivos mediante MD5, SHA-1 o SHA-2
 
 ¿Cómo es posible saber fácilmente si el archivo que estoy recibiendo es legítimo? ¿Es posible saber si se ha corrompido mientras lo descargaba de Internet? Sí, es posible mediante su hash. El hash funciona como un código de identificación del dato con el cual estamos trabajando. Si llega a alterarse un determinado dato de origen, este código alfanumérico de salida se altera por completo. A continuación, te mostramos todo lo que necesitas saber y qué herramientas recomendamos para generar hashes cuando lo necesites.
 
@@ -30,79 +30,69 @@ Estas funciones matemáticas, son tremendamente útiles para producir valores ú
 
 ## Ejemplo práctico 1
 
-Por ejemplo, imaginemos que hemos descargado un archivo llamado alpine-standard-3.18.3-x86_64.iso ubicado en la URL:
+Por ejemplo, imaginemos que entramos en la página de descarga de Debian [https://www.debian.org/download](https://www.debian.org/download) se encuentra los siguientes archivos:
 
-[https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso)
+* [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.1.0-amd64-netinst.iso](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.1.0-amd64-netinst.iso)
+* [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS)
 
-
-Este archivo se encuentra ubicado en la carpeta Descargas de nuestro directorio personal y queremos calcular su hash y compararlo con el que se encuentra en la página web para comprobar la integridad del archivo, por lo tanto, debemos abrir un Terminal (CTRL+ALT+T) y ejecutar los siguientes comandos:
-
-```bash
-$ cd Descargas
-
-$ ls -l
-total 193536
--rw-rw-r-- 1 jonay jonay 198180864 ago  7 14:13 alpine-standard-3.18.3-x86_64.iso
-
-$ sha256sum alpine-standard-3.18.3-x86_64.iso 
-badeb7f57634c22dbe947bd692712456f2daecd526c14270355be6ee5e73e83e  alpine-standard-3.18.3-x86_64.iso
-```
-
-La clave SHA-256 se encuentra en el archivo que se puede descargar en la URL:
-
-[https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256)
-
-cuyo contenido es el siguiente:
-
-```bash:alpine-standard-3.18.3-x86_64.iso.sha256
-# Contenido del fichero alpine-standard-3.18.3-x86_64.iso.sha256
-badeb7f57634c22dbe947bd692712456f2daecd526c14270355be6ee5e73e83e  alpine-standard-3.18.3-x86_64.iso
-```
-
-Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de la página web. En caso de que no coincidieran las claves, sería necesario volver a descargar el archivo hasta que las claves hash coincidan.
-
-## Ejemplo práctico 2
-
-En este ejemplo, descargaremos en nuestro ordenador, aparte del fichero con extensión ISO llamado alpine-standard-3.18.3-x86_64.iso, el archivo con la clave hash llamado alpine-standard-3.18.3-x86_64.iso.sha256:
-
-* [https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso)
-* [https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256](https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256)
-
-Descargaremos estos archivos desde la línea de comandos utilizando el comando wget:
+Para descargar estos archivos desde línea de comandos, abrimos un Terminal (CTRL+ALT+T) y utilizamos el comando __wget__:
 
 ```bash
 $ cd Descargas
 
-$ wget https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso
-$ wget https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-standard-3.18.3-x86_64.iso.sha256
-
-$ ls -l
-total 193544
--rw-r--r-- 1 jonay jonay 198180864 ago  7 14:13 alpine-standard-3.18.3-x86_64.iso
--rw-r--r-- 1 jonay jonay       100 ago  7 14:13 alpine-standard-3.18.3-x86_64.iso.sha256
+$ wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.1.0-amd64-netinst.iso
+$ wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS
 ```
 
-El archivo alpine-standard-3.18.3-x86_64.iso.sha256 es un archivo de texto y podemos ver su contenido desde la terminal utilizando el comando cat:
+Estos archivos se encuentran ubicados en la carpeta _Descargas_ de nuestro directorio personal:
 
 ```bash
-$ cat alpine-standard-3.18.3-x86_64.iso.sha256
-badeb7f57634c22dbe947bd692712456f2daecd526c14270355be6ee5e73e83e  alpine-standard-3.18.3-x86_64.iso
+$ pwd
+/home/jonay/Descargas
+
+$ ls -la
+total 642064
+drwxr-xr-x 2 jonay jonay      4096 sep 22 08:23 .
+drwxr-xr-x 3 jonay jonay      4096 sep 22 08:23 ..
+-rw-r--r-- 1 jonay jonay 657457152 jul 22 13:30 debian-12.1.0-amd64-netinst.iso
+-rw-r--r-- 1 jonay jonay       494 jul 22 17:49 SHA512SUMS
 ```
 
-Ahora utilizaremos el hash almacenado en el archivo sh almacenado en el archivo alpine-standard-3.18.3-x86_64.iso.sha256 , para verificar la integridad del archivo alpine-standard-3.18.3-x86_64.iso que hemos descargado:
+Para calcular el hash del archivo _debian-12.1.0-amd64-netinst.iso_ utilizamos el comando __sha512sum__:
 
 ```bash
-$ cat alpine-standard-3.18.3-x86_64.iso.sha256 | sha256sum --check
-alpine-standard-3.18.3-x86_64.iso: La suma coincide
-
-# Otra manera de hacer lo mismo
-$ sha256sum -c alpine-standard-3.18.3-x86_64.iso.sha256 2>/dev/null | grep alpine-standard-3.18.3-x86_64.iso
-alpine-standard-3.18.3-x86_64.iso.sha256: La suma coincide
+$ sha512sum debian-12.1.0-amd64-netinst.iso 
+9da6ae5b63a72161d0fd4480d0f090b250c4f6bf421474e4776e82eea5cb3143bf8936bf43244e438e74d581797fe87c7193bbefff19414e33932fe787b1400f  debian-12.1.0-amd64-netinst.iso
 ```
 
-Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de la página web. En caso de que no coincidieran las claves, sería necesario volver a descargar el archivo hasta que las claves hash coincidan.
+El archivo _SHA512SUMS_ contiene la clave hash del fichero hash del fichero _debian-12.1.0-amd64-netinst.iso_ entre otros:
 
-> Nota: Esta es una manera más limpia de comprobar la integridad de un archivo, utilizando la opción --check con el comando sha256sum o sha512sum.
+```bash
+$ cat SHA512SUMS 
+9da6ae5b63a72161d0fd4480d0f090b250c4f6bf421474e4776e82eea5cb3143bf8936bf43244e438e74d581797fe87c7193bbefff19414e33932fe787b1400f  debian-12.1.0-amd64-netinst.iso
+a75265fcbb50908b5b61d533d85893552a5a0c826050795368d17b632378da29effe2665804cbc52fe8a8f8142e389b07a369bc7a264fd454f562e47a4284e1a  debian-edu-12.1.0-amd64-netinst.iso
+1d59635d33a3b31ebd31f13c8e2531625aa17310ae271e2b17215ea88c3daee8cd520491ec72870542cc9e5f4d633d63b6a1da2ddb81970daff1245224e881ce  debian-mac-12.1.0-amd64-netinst.iso
+```
+
+Lo que queremos es calcular el hash del archivo _debian-12.1.0-amd64-netinst.iso_ y compararlo con el que se encuentra dentro del fichero _SHA512SUMS_ para comprobar la integridad del archivo. Para ello, utilizamos el comando _sha512sum_ con la opción _--check_:
+
+```bash
+$ sha512sum --check SHA512SUMS
+debian-12.1.0-amd64-netinst.iso: La suma coincide
+sha512sum: debian-edu-12.1.0-amd64-netinst.iso: No existe el fichero o el directorio
+debian-edu-12.1.0-amd64-netinst.iso: FAILED open or read
+sha512sum: debian-mac-12.1.0-amd64-netinst.iso: No existe el fichero o el directorio
+debian-mac-12.1.0-amd64-netinst.iso: FAILED open or read
+```
+
+> Nota: En el archivo _SHA512SUMS_ se encuentran los hash de los archivos _debian-12.1.0-amd64-netinst.iso_, _debian-edu-12.1.0-amd64-netinst.iso_ y _debian-mac-12.1.0-amd64-netinst.iso_ de los cuales solamente hemos descargado el primero, de ahí que aparezcan esos errores en la terminal.
+
+Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de la página de descargas de Debian. En caso de que no coincidieran las claves, sería necesario volver a descargar el archivo hasta que las claves hash coincidan.
+
+
+## Comprobar la autenticidad de los archivos
+
+
 
 ## Comandos
 
@@ -117,3 +107,7 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 * [https://www.redeszone.net/tutoriales/seguridad/comprobar-integridad-archivos-hash/](https://www.redeszone.net/tutoriales/seguridad/comprobar-integridad-archivos-hash/)
 * [https://linuxmint-installation-guide.readthedocs.io/es/latest/verify.html](https://linuxmint-installation-guide.readthedocs.io/es/latest/verify.html)
 * [https://www.ochobitshacenunbyte.com/2023/01/03/como-generar-un-hash-sha-256-en-linux/](https://www.ochobitshacenunbyte.com/2023/01/03/como-generar-un-hash-sha-256-en-linux/)
+
+Firma de los ficheros:
+* [Verificar la integridad y la autenticidad de la imagen de Linux Mint](https://linuxmint-installation-guide.readthedocs.io/es/latest/verify.html)
+* [Verificar la autenticidad de las imágenes de Debian](https://www.debian.org/CD/verify)
