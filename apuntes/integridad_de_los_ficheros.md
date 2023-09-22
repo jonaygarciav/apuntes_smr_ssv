@@ -93,13 +93,13 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 ## Comprobar la autenticidad de los archivos
 
 
-## Comandos
+## Comandos utilizados
 
-* _sha256sum_: calcula y comprueba el resumen del mensaje SHA256 de tipo SHA-2.
 * _sha512sum_: calcula y comprueba el resumen del mensaje SHA512 de tipo SHA-2.
 * _ls -l_: lista los archivos y carpetas del directorio en que nos encontramos actualmente.
 * _wget_: permite descargar archivos de Internet.
 * _cat_: muestra el contenido de un fichero de texto.
+* _pwd_: muestra el directorio en el que estoy ubicado actualmente.
 
 ## Referencias
 
@@ -109,4 +109,4 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 
 Firma de los ficheros:
 * [Verificar la integridad y la autenticidad de la imagen de Linux Mint](https://linuxmint-installation-guide.readthedocs.io/es/latest/verify.html)
-* [Verificar la autenticidad de las imágenes de Debian](https://www.debian.org/CD/verify)
+* [Verificar la autenticidad de las imágenes de Debian](https://www.debian.org/CD/verify)[[Verificar la autenticidad de las imágenes de Debian](https://www.debian.org/CD/verify]
