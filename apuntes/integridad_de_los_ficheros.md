@@ -95,11 +95,11 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 
 ## Comandos utilizados
 
-* _sha512sum_: calcula y comprueba el resumen del mensaje SHA512 de tipo SHA-2.
+* _sha512sum_: calcula y comprueba el hash SHA512 de tipo SHA-2 de un archivo.
 * _ls -l_: lista los archivos y carpetas del directorio en que nos encontramos actualmente.
 * _wget_: permite descargar archivos de Internet.
 * _cat_: muestra el contenido de un fichero de texto.
-* _pwd_: muestra el directorio en el que estoy ubicado actualmente.
+* _pwd_: muestra el directorio en el que nos encontramos actualmente.
 
 ## Referencias
 
