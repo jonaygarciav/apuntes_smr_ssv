@@ -30,7 +30,7 @@ Estas funciones matemáticas, son tremendamente útiles para producir valores ú
 
 ## Ejemplo práctico
 
-Por ejemplo, imaginemos que entramos en la página de descarga de Debian [https://www.debian.org/download](https://www.debian.org/download) se encuentra los siguientes archivos:
+Por ejemplo, imaginemos que entramos en la página de descarga de Debian [https://www.debian.org/download](https://www.debian.org/download), en la que se encuentran los siguientes archivos:
 
 * [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.1.0-amd64-netinst.iso](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.1.0-amd64-netinst.iso)
 * [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS)
