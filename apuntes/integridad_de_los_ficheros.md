@@ -134,7 +134,7 @@ uid        [desconocida] Debian CD signing key <debian-cd@lists.debian.org>
 sub   rsa4096 2011-01-05 [E]
 ```
 
-Una vez hemos comprobado la que la clave pública de Debian se encuentra instalada en nuestro sistema, descargamos el fichero _SHA512SUMS.sign_ de la página de Debian, suponemos que el fichero _SHA512SUMS_ ya lo teníamos descargado en nuestro sistema, si no lo descargamos también:
+Descargamos el fichero _SHA512SUMS.sign_ de la página de Debian, suponemos que el fichero _SHA512SUMS_ ya lo teníamos descargado en nuestro sistema, si no lo descargamos también:
 
 ```bash
 $ pwd
