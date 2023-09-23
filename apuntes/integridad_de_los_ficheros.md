@@ -92,7 +92,7 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 
 ## Comprobar la autenticidad de los archivos
 
-Descargamos del servidor de claves de Debian llamado __keyring.debian.org__ la clave pública con identificador _6294BE9B_:
+Descargamos del servidor de claves de Debian llamado __keyring.debian.org__ la clave pública con identificador _6294BE9B_, para ello utilizamos el comando __gpg__:
 
 ```bash
 $ gpg --keyserver keyring.debian.org --recv 6294BE9B
@@ -101,7 +101,10 @@ gpg: Cantidad total procesada: 1
 gpg:               importadas: 1
 ```
 
-Una vez importada la clave pública de Debian, listamos todas las claves públicas instaladas en el sistema:
+Podemos ver todas las claves de Debian en la siguiente URL:
+* [https://www.debian.org/CD/verify](https://www.debian.org/CD/verify)
+
+Una vez importada la clave pública de Debian, listamos todas las claves públicas instaladas en el sistema para comprobar que se ha instalado correctamente:
 
 ```bash
 $ gpg --list-key
@@ -121,7 +124,7 @@ uid        [desconocida] Debian CD signing key <debian-cd@lists.debian.org>
 sub   rsa4096 2011-01-05 [E]
 ```
 
-También podemos ver solamente la información de la clave pública de Debian con instalada en nuestro sistema:
+Otra manera de comprobar si la clave pública de Debian está instalada en nuestro sistema:
 
 ```bash
 $ gpg --fingerprint 6294BE9B
@@ -173,6 +176,7 @@ Finalmente podemos afirmar que el fichero _SHA512SUMS_ es auténtico y ha sido c
 * _wget_: permite descargar archivos de Internet.
 * _cat_: muestra el contenido de un fichero de texto.
 * _pwd_: muestra el directorio en el que nos encontramos actualmente.
+* _gpg_: permite cifrar y firmar archivos digitalmente.
 
 ## Referencias
 
