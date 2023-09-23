@@ -143,7 +143,7 @@ $ pwd
 $ wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS.sign
 ```
 
-Comprobamos que tenemos los archivos _SHA512SUMS_ y _SHA512SUMS.sign_ se encuentran descargados:
+Comprobamos que los archivos _SHA512SUMS_ y _SHA512SUMS.sign_ se encuentran descargados:
 
 ```bash
 $ ls -l
