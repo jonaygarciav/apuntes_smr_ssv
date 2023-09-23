@@ -92,6 +92,79 @@ Por lo tanto, podemos concluir que el archivo se ha descargado correctamente de 
 
 ## Comprobar la autenticidad de los archivos
 
+Descargamos del servidor de claves de Debian llamado __keyring.debian.org__ la clave pública con identificador _6294BE9B_:
+
+```bash
+$ gpg --keyserver keyring.debian.org --recv 6294BE9B
+gpg: clave DA87E80D6294BE9B: clave pública "Debian CD signing key <debian-cd@lists.debian.org>" importada
+gpg: Cantidad total procesada: 1
+gpg:               importadas: 1
+```
+
+Una vez importada la clave pública de Debian, listamos todas las claves públicas instaladas en el sistema:
+
+```bash
+$ gpg --list-key
+/home/jonay/.gnupg/pubring.kbx
+------------------------------
+pub   ed25519 2019-11-22 [SC] [caduca: 2024-07-27]
+      4D14050653A402D73687049D2404C9546E145360
+uid        [desconocida] Gunnar Wolf <gwolf@debian.org>
+uid        [desconocida] Gunnar Wolf <gwolf@gwolf.org>
+uid        [desconocida] Gunnar Eyal Wolf Iszaevich <gwolf@iiec.unam.mx>
+sub   ed25519 2019-11-22 [A] [caduca: 2024-07-27]
+sub   cv25519 2019-11-22 [E] [caduca: 2024-07-27]
+
+pub   rsa4096 2011-01-05 [SC]
+      DF9B9C49EAA9298432589D76DA87E80D6294BE9B
+uid        [desconocida] Debian CD signing key <debian-cd@lists.debian.org>
+sub   rsa4096 2011-01-05 [E]
+```
+
+También podemos ver solamente la información de la clave pública de Debian con instalada en nuestro sistema:
+
+```bash
+$ gpg --fingerprint 6294BE9B
+pub   rsa4096 2011-01-05 [SC]
+      DF9B 9C49 EAA9 2984 3258  9D76 DA87 E80D 6294 BE9B
+uid        [desconocida] Debian CD signing key <debian-cd@lists.debian.org>
+sub   rsa4096 2011-01-05 [E]
+```
+
+Una vez hemos comprobado la que la clave pública de Debian se encuentra instalada en nuestro sistema, descargamos el fichero _SHA512SUMS.sign_ de la página de Debian, suponemos que el fichero _SHA512SUMS_ ya lo teníamos descargado en nuestro sistema, si no lo descargamos también:
+
+```bash
+$ pwd
+/home/jonay/Descargas
+
+$ wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS.sign
+```
+
+Comprobamos que tenemos los archivos _SHA512SUMS_ y _SHA512SUMS.sign_ se encuentran descargados:
+
+```bash
+$ ls -l
+total 1933348
+-rw-r--r-- 1 jonay jonay 657457152 jul 22 13:30 debian-12.1.0-amd64-netinst.iso
+-rw-r--r-- 1 jonay jonay       494 jul 22 17:49 SHA512SUMS
+-rw-r--r-- 1 jonay jonay       833 jul 22 18:04 SHA512SUMS.sign
+```
+
+El fichero _SHA512SUMS.sign_ es un _PGP SIGNATURE_, que es una firma digital que sirve para certificar que el archivo que contiene los hash de los archivos de Debian (en este caso el archivo _SHA512SUMS_) ha sido creado por la la entidad que lo firma (en este caso Debian).
+
+Para verificar la autenticidad del archivo _SHA512SUMS_, necesitamos el archivo _SHA512SUMS.sign_ que contiene la firma digital y la clave pública de Debian que intalamos previamente:
+
+```bash
+$ gpg --verify SHA512SUMS.sign SHA512SUMS
+gpg: Firmado el sáb 22 jul 2023 18:04:08 WEST
+gpg:                usando RSA clave DF9B9C49EAA9298432589D76DA87E80D6294BE9B
+gpg: Firma correcta de "Debian CD signing key <debian-cd@lists.debian.org>" [desconocido]
+gpg: ATENCIÓN: ¡Esta clave no está certificada por una firma de confianza!
+gpg:          No hay indicios de que la firma pertenezca al propietario.
+Huellas dactilares de la clave primaria: DF9B 9C49 EAA9 2984 3258  9D76 DA87 E80D 6294 BE9B
+```
+
+Finalmente podemos afirmar que el fichero _SHA512SUMS_ es auténtico y ha sido creado por la entidad que lo firma, en este caso Debian, y no ha sido modificado por nadie.
 
 ## Comandos utilizados
 
