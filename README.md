@@ -2,4 +2,6 @@
 
 ## UT06 (Configuración de Máquinas Virtuales)
 
-* Integridad y autenticidad de los ficheros \([Apuntes](./apuntes/integridad_de_los_ficheros.md))
+* Comprobar la integridad y autenticidad de archivos \([Apuntes](./apuntes/integridad_de_los_ficheros.md))
+* ¿Qué es la Virtualización? \([Apuntes](./apuntes/virtualizacion.md))
+* Oracle VirtualBox y VMWare Player
