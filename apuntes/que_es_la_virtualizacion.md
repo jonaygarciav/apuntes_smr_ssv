@@ -23,63 +23,60 @@ Para ver un análisis más detallado de los posibles beneficios, consulte "5 ben
 
 ## Máquinas virtuales (VM)
 
-Las máquinas virtuales (VM) son entornos virtuales que simulan un sistema físico en formato de software. Normalmente incluyen varios archivos que contienen la configuración de la VM, el almacenamiento de la unidad de disco duro virtual y algunas instantáneas de la VM que conservan su estado en un determinado momento.
+Las __máquinas virtuales__ o __virtual machines__ (_VM_) son entornos virtuales que simulan un sistema físico en formato de software. Normalmente incluyen varios archivos que contienen la configuración de la VM, el almacenamiento de la unidad de disco duro virtual y algunas instantáneas de la VM que conservan su estado en un determinado momento.
 
 Para obtener una visión general completa de las máquinas virtuales, consulte "¿Qué es una máquina virtual?"
 
 ## Hipervisores
 
-Un hipervisor es la capa de software que coordina las Máquinas Virtuales. Sirve como interfaz entre la VM y el hardware físico subyacente, y garantiza que cada uno tenga acceso a los recursos físicos que necesita ejecutar. También se asegura de que las máquinas virtuales no interfieran entre ellas afectando al espacio de memoria o los ciclos de cálculo del resto.
+Un __hipervisor__ o __hypervisor__ es la capa de software que coordina a las VMS. Sirve como interfaz entre la VM y el hardware físico subyacente, y garantiza que cada uno tenga acceso a los recursos físicos que necesita ejecutar: CPU, RAM, GPU, ... También se asegura de que las VMs no interfieran entre ellas afectando al espacio de memoria o los ciclos de cálculo del resto.
 
 Hay dos tipos de hipervisores:
 
 * __Hipervisores de tipo 1__: interactúan con los recursos físicos subyacentes, sustituyendo por completo al sistema operativo tradicional. Suelen aparecer en escenarios de servidor virtual.
 
-#FOTO Hipervisor tipo 1
-
 * __Hipervisores de tipo 2__: se ejecutan como una aplicación en un sistema operativo existente. Normalmente se utilizan en dispositivos de punto final para ejecutar sistemas operativos alternativos e implican una sobrecarga de rendimiento porque deben utilizar el sistema operativo del host para acceder y coordinar los recursos de hardware subyacentes.
-"Hipervisores: Guía completa" proporciona una visión general completa de los hipervisores.
 
-#Foto Hipervisor tipo 2
+![][hipervisores_tipo_1_y_2]
 
-## Soluciones para la virtualización
-
-Varias empresas ofrecen soluciones de virtualización que cubren tareas específicas del centro de datos o escenarios de virtualización de escritorio centrados en el usuario final. Entre los ejemplos más conocidos se incluyen VMware, que se especializa en virtualización de servidores, escritorios, redes y almacenamiento; Citrix, que tiene un nicho en la virtualización de aplicaciones, pero también ofrece virtualización de servidores y soluciones de escritorio virtual, y Microsoft, cuya solución de virtualización Hyper-V se suministra con Windows y se centra en las versiones virtuales de los sistemas de escritorio y servidor.
-
-### VMware
-
-VMware crea software de virtualización. VMware empezó ofreciendo solo virtualización de servidor; su hipervisor ESX (ahora ESXi) fue uno de los primeros productos de virtualización con éxito comercial.
-
-# TODO
-
-### Oracle Virtualbox
-
-# TODO
- 
 ## Seguridad
 
-La virtualización ofrece algunas ventajas de seguridad. Por ejemplo, las máquinas virtuales infectadas con malware pueden retrotraerse a un punto en el tiempo (denominado instantánea) en el que la VM no estaba infectada y estaba estable; también se pueden suprimir y volver a crear más fácilmente. No siempre se puede desinfectar un sistema operativo no virtualizado, ya que el malware a menudo está profundamente integrado en los componentes principales del sistema operativo y persisten más allá de las retrotracciones del sistema.
+La virtualización ofrece algunas ventajas de seguridad, por ejemplo:
 
-La virtualización también presenta algunos problemas de seguridad. Si un atacante compromete un hipervisor, es posible que posea todas las máquinas virtuales y los sistemas operativos invitados. Como los hipervisores también permiten que las máquinas virtuales se comuniquen entre sí sin tocar la red física, puede ser difícil ver su tráfico y, por lo tanto, detectar la actividad sospechosa.
+* Las VMs infectadas con malware pueden retrotraerse a un punto en el tiempo (denominado __instantánea__ o __snapshot__) en el que la VM no estaba infectada y estaba estable.
+* Se pueden suprimir una VM y volver a crear de manera más fácil.
 
-Un hipervisor de tipo 2 en un sistema operativo de host también es susceptible de comprometer el sistema operativo del host.
+> Nota: no siempre se puede desinfectar un sistema operativo virtualizado, ya que el malware a menudo está profundamente integrado en los componentes principales del sistema operativo.
 
-El mercado ofrece una amplia gama de productos de seguridad de virtualización que pueden escanear y crear parches de máquinas virtuales para el malware, cifrar discos virtuales de VM completos, y controlar y auditar el acceso de VM.
+La virtualización también presenta algunos problemas de seguridad, algunos de ellos son:
+
+* Si un atacante compromete un hipervisor, es posible que posea todas las VMs y los sistemas operativos invitados. Como los hipervisores también permiten que las máquinas virtuales se comuniquen entre sí sin tocar la red física, puede ser difícil ver su tráfico y, por lo tanto, detectar la actividad sospechosa.
+
+* Un hipervisor de tipo 2 en un sistema operativo de host también es susceptible de comprometer el sistema operativo del host.
 
 ## Tecnologías de Virtualización en fabricantes de procesadores Intel y AMD
 
 Debido al gran uso que tienen las técnicas de virtualización por parte de empresas IT, para conseguir un óptimo rendimiento de sus equipos, los fabricantes de hardware se han visto prácticamente obligados a crear soluciones para sus plataformas que permitan un mejor aprovechamiento de los recursos hardware de las máquinas físicas por parte de las máquinas virtuales.
 
-Es así como nacen las tecnologías de virtualización __VT-X__ por parte de la compañía _Intel_ y __AMD-V__ por parte de la compañía _AMD_. Estas tecnologías nos permiten, entre otras cosas:
+Es así como nacen las tecnologías de virtualización __VT-x__ por parte de la compañía _Intel_ y __AMD-V__ por parte de la compañía _AMD_. Estas tecnologías nos permiten, entre otras cosas:
 
-* Abstraer de forma total las características técnicas del procesador para las máquinas virtuales. De esa forma el software de una máquina virtual se podrá ejecutar de forma nativa en la CPU dedicada de la máquina física. Para ello VT-X y AMD-V destinan físicamente parte de su CPU a la máquina virtual para que esta sea capaz de trabajar con él de forma directa.
+* Abstraer de forma total las características técnicas del procesador para las máquinas virtuales. De esa forma el software de una máquina virtual se podrá ejecutar de forma nativa en la CPU dedicada de la máquina física. Para ello VT-x y AMD-V destinan físicamente parte de su CPU a la máquina virtual para que esta sea capaz de trabajar con él de forma directa.
 
 * Abstraer la _memoria RAM_ de un equipo físico para que una máquina virtual la utilice.
 
 * Abstraer los recursos gráficos de la GPU de un equipo físico para permitir la aceleración por hardware tal y como si estuviéramos en un equipo real.
 
-Tanto VT-X como AMD-V son tecnologías que han de activarse en la BIOS del sistema.
+Tanto VT-x como AMD-V son tecnologías que han de activarse en la BIOS del sistema.
 
-#FOTO de tecnología VT-X en la BIOS
+A continuación, se muestra cómo activar la opción VT-x de Intel en una BIOS Phoenix, normalmente la opción VT-x aparece en la BIOS con el nombre de _Intel(R) Virtualization Technology_:
 
-#FOTO de error al arrancar VM si no tenemos VT-X activado
+![][activar_vt-x_en_la_bios]
+
+En caso de no tener la opción VT-X activada en la BIOS, al arrancar una VM en VirtualBox, nos aparecería el error _VT-x is not available_:
+
+![][error_en_vbox_porque_vt-x_no_esta_disponible.png]
+
+
+[hipervisores_tipo_1_y_2]: ./img/que_es_la_virtualizacion/hipervisores_tipo_1_y_2.png "Hipervisores tipo 1 y 2"
+[activar_vt-x_en_la_bios]: ./img/que_es_la_virtualizacion/activar_vt-x_en_la_bios.png "Activar VT-X en la BIOS"
+[error_en_vbox_porque_vt-x_no_esta_disponible.png]: ./img/que_es_la_virtualizacion/error_en_vbox_porque_vt-x_no_esta_disponible.**png** "Activar VT-X en la BIOS"
