@@ -1,6 +1,6 @@
 # ¿Qué es la Virtualización?
 
-La virtualización es un proceso que permite una utilización más eficaz del hardware físico y es la base del cloud computing.
+La __virtualización__ es un proceso que permite una utilización más eficaz del hardware físico y es la base del cloud computing.
 
 La virtualización utiliza software para crear una capa de abstracción sobre el hardware del sistema que permite dividir los elementos de hardware de un sistema (procesadores, memoria, almacenamiento, etc.) en varios sistemas virtuales, comúnmente llamados máquinas virtuales (VM). Cada VM ejecuta su propio sistema operativo y se comporta como un ordenador independiente, aunque se esté ejecutando en una parte del hardware del sistema subyacente real.
 
