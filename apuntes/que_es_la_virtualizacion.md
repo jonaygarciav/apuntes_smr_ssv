@@ -8,9 +8,6 @@ De este modo, la virtualización permite una utilización más eficaz del hardwa
 
 Hoy en día, la virtualización es una práctica estándar en la arquitectura de TI empresarial. También es la tecnología que impulsa la economía de cloud computing. La virtualización permite a los proveedores de cloud dar servicio a los usuarios con el hardware físico existente. Los usuarios del cloud pueden adquirir solo los recursos informáticos que necesitan y cuando los necesitan, y escalarlos de forma rentable a medida que crezcan sus cargas de trabajo.
 
-Para obtener una visión general de cómo funciona la virtualización, consulte nuestro vídeo "En qué consiste la virtualización":
-
-
 ## Ventajas de la virtualización
 
 La virtualización ofrece varias ventajas a los operadores de centros de datos y los proveedores de servicios:
