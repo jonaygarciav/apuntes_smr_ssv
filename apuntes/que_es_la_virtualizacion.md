@@ -28,7 +28,7 @@ Para obtener una visión general completa de las máquinas virtuales, consulte "
 
 ## Hipervisores
 
-Un __hipervisor__ o __hypervisor__ es la capa de software que coordina a las VMS. Sirve como interfaz entre la VM y el hardware físico subyacente, y garantiza que cada uno tenga acceso a los recursos físicos que necesita ejecutar: CPU, RAM, GPU, ... También se asegura de que las VMs no interfieran entre ellas afectando al espacio de memoria o los ciclos de cálculo del resto.
+Un __hipervisor__ o __hypervisor__ es la capa de software que coordina a las VMs. Sirve como interfaz entre la VM y el hardware físico subyacente, y garantiza que cada uno tenga acceso a los recursos físicos que necesita ejecutar: CPU, RAM, GPU, ... También se asegura de que las VMs no interfieran entre ellas afectando al espacio de memoria o los ciclos de cálculo del resto.
 
 Hay dos tipos de hipervisores:
 
