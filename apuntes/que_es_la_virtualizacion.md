@@ -77,4 +77,4 @@ En caso de no tener la opción VT-X activada en la BIOS, al arrancar una VM en V
 
 [hipervisores_tipo_1_y_2]: ./img/que_es_la_virtualizacion/hipervisores_tipo_1_y_2.png "Hipervisores tipo 1 y 2"
 [activar_vt-x_en_la_bios]: ./img/que_es_la_virtualizacion/activar_vt-x_en_la_bios.png "Activar VT-X en la BIOS"
-[error_en_vbox_porque_vt-x_no_esta_disponible.png]: ./img/que_es_la_virtualizacion/error_en_vbox_porque_vt-x_no_esta_disponible.**png** "Activar VT-X en la BIOS"
+[error_en_vbox_porque_vt-x_no_esta_disponible.png]: ./img/que_es_la_virtualizacion/error_en_vbox_porque_vt-x_no_esta_disponible.png "Activar VT-X en la BIOS"
