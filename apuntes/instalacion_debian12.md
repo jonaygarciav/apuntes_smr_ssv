@@ -62,4 +62,4 @@
 [28]: ./img/instalacion_debian12/28.png "28"
 [29]: ./img/instalacion_debian12/29.png "29"
 [30]: ./img/instalacion_debian12/30.png "30"
-[31]: ./img/instalacion_debian12/21.png "31"
+[31]: ./img/instalacion_debian12/31.png "31"
