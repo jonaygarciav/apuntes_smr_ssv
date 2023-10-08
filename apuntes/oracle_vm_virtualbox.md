@@ -159,11 +159,11 @@ El panel de detalles incluye lo siguiente:
 
 La barra de herramientas incluye los siguientes botones:
 
-    * _Nuevo_: crea una nueva VM y la añade a la lista de máquinas.
-    * _Añadir_: Agrega una VM existente a la lista de máquinas.
-    * _Configuración_: muestra la ventana de Configuración de la VM, permitiéndote realizar cambios en la configuración.
-    * _Descartar_: para una VM en ejecución, descarta el estado guardado de la VM y la apaga.
-    * _Mostrar/Iniciar_: para una VM en ejecución, "Mostrar" muestra la ventana de la VM. Para una VM detenida, "Iniciar" muestra opciones para encender la VM.
+   * _Nuevo_: crea una nueva VM y la añade a la lista de máquinas.
+   * _Añadir_: Agrega una VM existente a la lista de máquinas.
+   * _Configuración_: muestra la ventana de Configuración de la VM, permitiéndote realizar cambios en la configuración.
+   * _Descartar_: para una VM en ejecución, descarta el estado guardado de la VM y la apaga.
+   * _Mostrar/Iniciar_: para una VM en ejecución, "Mostrar" muestra la ventana de la VM. Para una VM detenida, "Iniciar" muestra opciones para encender la VM.
 
 La opción _Configuraciones_ permite modificar algunas configuraciones de la VM.
 
