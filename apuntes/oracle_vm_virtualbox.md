@@ -207,7 +207,7 @@ El menú herramientas de máquina cuenta con las siguientes opciones:
 
 ## Crear nuestra primera VM
 
-El Administrador de VirtualBox incluye asistentes que te permiten completar tareas fácilmente. Ejemplos de tales tareas son cuando creas una nueva VM.
+El _Administrador de VirtualBox_ incluye asistentes que te permiten completar tareas fácilmente. Ejemplos de tales tareas son cuando creas una nueva VM.
 
 * __Modo Guiado__: este es el modo de visualización predeterminado. Los asistentes se muestran de la manera convencional, utilizando una serie de páginas con descripciones para guiar al usuario a través de los pasos de una tarea.
 * __Modo Experto__: este modo de visualización está diseñado para usuarios más avanzados de Oracle VM VirtualBox. Todos los ajustes se muestran en una sola página, permitiendo una finalización más rápida de las tareas.
@@ -254,12 +254,14 @@ A continuación, entramos en el asistente _Crear Máquina Virtual_ en la secció
 
 > Nota: para evitar que tu disco duro físico en el sistema operativo host se llene, Oracle VM VirtualBox limita el tamaño del archivo de imagen. Pero el archivo de imagen debe ser lo suficientemente grande como para contener el contenido del sistema operativo invitado y las aplicaciones que deseas instalar. Para un invitado Windows o Linux, probablemente necesitarás varios gigabytes para cualquier uso serio.
 
-Los diferentes tipos de archivos de imagen se comportan de la siguiente manera:
+Los diferentes tipos de archivos de imagen de disco se comportan de la siguiente manera:
 
-* __Archivo asignado dinámicamente__: este tipo de archivo de imagen solo aumenta de tamaño cuando el invitado realmente almacena datos en su disco duro virtual. Por lo tanto, este archivo es pequeño inicialmente. A medida que la unidad se llena de datos, el archivo crece al tamaño especificado.
-* __Archivo de tamaño fijo__: este tipo de archivo de imagen ocupa inmediatamente el espacio especificado, incluso si solo una fracción de ese espacio de disco duro virtual está realmente en uso. Aunque ocupa mucho más espacio, un archivo de tamaño fijo incurre en menos sobrecarga y, por lo tanto, es ligeramente más rápido que un archivo asignado dinámicamente.
+* __Archivo asignado dinámicamente__: este tipo de archivo de imagen de disco solo aumenta de tamaño cuando el invitado realmente almacena datos en su disco duro virtual. Por lo tanto, este archivo es pequeño inicialmente. A medida que la unidad se llena de datos, el archivo crece al tamaño especificado.
+* __Archivo de tamaño fijo__: este tipo de archivo de imagen de disco ocupa inmediatamente el espacio especificado, incluso si solo una fracción de ese espacio de disco duro virtual está realmente en uso. Aunque ocupa mucho más espacio, un archivo de tamaño fijo incurre en menos sobrecarga y, por lo tanto, es ligeramente más rápido que un archivo asignado dinámicamente.
 
 ![][crear_vm03]
+
+> Nota: en _Modo guiado_ el archivo de disco duro virtual se crea con extensión _VDI_. Si queremos crear un archivo de disco duro virtual, por ejemplo, VHD, VMDK, HDD, QCOW o QED, tendríamos que entrar en el _Modo experto_.
 
 A continuación, entramos en el asistente _Crear Máquina Virtual_ en la sección _Resumen_, donde se muestra la configuración para la VM. Si no estamos satisfecho con alguna de las configuraciones, podemos usar el botón Atrás para volver a la página correspondiente y modificar la configuración.
 
