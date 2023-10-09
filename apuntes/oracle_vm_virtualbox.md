@@ -40,7 +40,7 @@ Al tratar con virtualización hay que familiarizarse con cierta terminología, e
 * __Máquina virtual (VM)__: este es el entorno especial que VirtualBox crea para tu SO invitado mientras está en funcionamiento. En otras palabras, ejecutas tu SO invitado en una VM. Normalmente, una VM se muestra como una ventana en el escritorio de tu ordenador. Dependiendo de cuál de las diferentes interfaces de VirtualBox utilices, la VM podría mostrarse en modo de pantalla completa o de forma remota en otro ordenador. Internamente, VirtualBox trata a una VM como un conjunto de parámetros que especifican su comportamiento. Algunos parámetros describen configuraciones de hardware, como la cantidad de memoria y el número de CPUs asignadas. Otros parámetros describen la información del estado, como si la VM está en funcionamiento o guardada.
 * __Complementos para invitados (Guest Additions)__: esto se refiere a paquetes de software especiales que se envían con VirtualBox pero diseñados para ser instalados dentro de una VM para mejorar el rendimiento del SO invitado y agregar características adicionales.
 
-## Descripción de las características
+## Descripción de las características de Oracle VM VirtualBox
 
 A continuación, se muestra un breve resumen de las principales características de Oracle VM VirtualBox:
 
@@ -48,7 +48,7 @@ A continuación, se muestra un breve resumen de las principales características
 
 Oracle VM VirtualBox es un hipervisor denominado hosteado, a veces referido como hipervisor tipo 2. Mientras que un hipervisor de metal desnudo o tipo 1 se ejecuta directamente en el hardware, Oracle VM VirtualBox requiere un sistema operativo ya instalado. Por lo tanto, puede ejecutarse junto con aplicaciones existentes en ese host.
 
-En gran medida, Oracle VM VirtualBox es funcionalmente idéntico en todas las plataformas host, y se utilizan los mismos formatos de archivo e imagen. Esto te permite ejecutar máquinas virtuales creadas en un host en otro host con un sistema operativo host diferente. Por ejemplo, puedes crear una máquina virtual en Windows y luego ejecutarla en Linux.
+En gran medida, Oracle VM VirtualBox es funcionalmente idéntico en todas las plataformas host, y se utilizan los mismos formatos de archivo e imagen. Esto te permite ejecutar máquinas virtuales creadas en un host en otro host con un sistema operativo host diferente. Por ejemplo, puedes crear una VM en Windows y luego ejecutarla en Linux.
 
 Además, las VM pueden importarse y exportarse fácilmente utilizando el Formato de Virtualización Abierta (OVF), un estándar de la industria creado para este propósito. Incluso puedes importar OVFs que fueron creados con otro software de virtualización.
 
@@ -58,12 +58,12 @@ En particular, las Adiciones para Invitados proporcionan carpetas compartidas, q
 
 * __Soporte de hardware integral__: entre otras características, Oracle VM VirtualBox soporta lo siguiente:
 
-    * _Multiprocesamiento de Invitados (SMP)_: Oracle VM VirtualBox puede presentar hasta 32 CPUs virtuales a cada máquina virtual, independientemente de cuántos núcleos de CPU estén físicamente presentes en tu host.
+    * _Multiprocesamiento de Invitados (SMP)_: Oracle VM VirtualBox puede presentar hasta 32 CPUs virtuales a cada VM, independientemente de cuántos núcleos de CPU estén físicamente presentes en tu host.
     * _Soporte de dispositivos USB_: Oracle VM VirtualBox implementa un controlador USB virtual y te permite conectar dispositivos USB arbitrarios a tus máquinas virtuales sin tener que instalar drivers específicos del dispositivo en el host. El soporte USB no está limitado a ciertas categorías de dispositivos.
     * _Compatibilidad con hardware_: Oracle VM VirtualBox virtualiza una vasta gama de dispositivos virtuales, entre ellos muchos dispositivos que normalmente proporcionan otras plataformas de virtualización. Esto incluye controladores de disco duro IDE, SCSI y SATA, varias tarjetas de red virtuales y tarjetas de sonido, puertos serie y paralelos virtuales y un Controlador de Interrupción Programable Avanzado de Entrada/Salida (I/O APIC), que se encuentra en muchos sistemas informáticos. Esto permite la fácil clonación de imágenes de disco de máquinas reales e importación de máquinas virtuales de terceros en Oracle VM VirtualBox.
     * _Soporte completo de ACPI_: la __Interfaz de Configuración y Energía Avanzada (ACPI)__ está totalmente soportada por Oracle VM VirtualBox. Esto permite la fácil clonación de imágenes de disco de máquinas reales o máquinas virtuales de terceros en Oracle VM VirtualBox. Con su único soporte de estado de energía ACPI, Oracle VM VirtualBox incluso puede informar a los sistemas operativos invitados conscientes de ACPI sobre el estado de energía del host. Para sistemas móviles que funcionan con batería, el invitado puede así habilitar el ahorro de energía y notificar al usuario de la energía restante, por ejemplo, en modos de pantalla completa.
     * _Resoluciones multi-pantalla_: las VM de Oracle VM VirtualBox soportan resoluciones de pantalla muchas veces mayores que una pantalla física, permitiéndoles extenderse sobre un gran número de pantallas conectadas al sistema host.
-    * _Soporte iSCSI incorporado_: esta característica única te permite conectar una máquina virtual directamente a un servidor de almacenamiento iSCSI sin pasar por el sistema host. La VM accede al objetivo iSCSI directamente sin el sobrecosto adicional que se requiere para virtualizar discos duros en archivos contenedores. Ver Sección 5.10, "Servidores iSCSI".
+    * _Soporte iSCSI incorporado_: esta característica única te permite conectar una VM directamente a un servidor de almacenamiento iSCSI sin pasar por el sistema host. La VM accede al objetivo iSCSI directamente sin el sobrecosto adicional que se requiere para virtualizar discos duros en archivos contenedores. Ver Sección 5.10, "Servidores iSCSI".
     * _Arranque de red PXE_: las tarjetas de red virtuales integradas de Oracle VM VirtualBox soportan completamente el arranque remoto usando el Entorno de Ejecución Preboot (PXE).
 * __Instantáneas (Snapshots)__: Oracle VM VirtualBox puede guardar instantáneas del estado de la VM. Puedes retroceder en el tiempo y revertir la VM a cualquiera de esas instantáneas y empezar una configuración VM alternativa desde allí, creando efectivamente todo un árbol de instantáneas.
 * __Grupos de VM__: Oracle VM VirtualBox proporciona una función de grupos que permite al usuario organizar y controlar máquinas virtuales colectivamente, así como individualmente. Además de los grupos básicos, es posible que cualquier VM esté en más de un grupo, y que los grupos estén anidados en una jerarquía. Esto significa que puedes tener grupos de grupos. En general, las operaciones que se pueden realizar en grupos son las mismas que las que se pueden aplicar a las VMs individuales: Iniciar, Pausar, Reiniciar, Cerrar (Guardar estado, Enviar apagado, Apagar), Descartar Estado Guardado, Mostrar en el Sistema de Archivos, Ordenar.
@@ -141,13 +141,13 @@ La lista de VMs en el panel izquierdo se llama la lista de VMs.
 
 Se pueden utilizar los siguientes métodos para controlar y configurar las máquinas virtuales en la lista de máquinas:
 
-* Haz clic derecho en el nombre de la máquina virtual para mostrar opciones del menú.
-* Haz clic en el menú Herramientas de Máquina, a la derecha del nombre de la máquina virtual.
+* Haz clic derecho en el nombre de la VM para mostrar opciones del menú.
+* Haz clic en el menú Herramientas de Máquina, a la derecha del nombre de la VM.
 * Haz clic en un botón en la barra de herramientas del panel de Detalles.
 
 ### El Panel de Detalles
 
-El Panel de Detalles muestra la información de configuración de una máquina virtual que está seleccionada en la lista de máquinas. El panel también incluye una barra de herramientas para realizar tareas.
+El Panel de Detalles muestra la información de configuración de una VM que está seleccionada en la lista de máquinas. El panel también incluye una barra de herramientas para realizar tareas.
 
 La siguiente figura muestra el Panel de Detalles del VirtualBox Manager de una VM, incluyendo la barra de herramientas.
 
@@ -167,7 +167,7 @@ La barra de herramientas incluye los siguientes botones:
 
 La opción _Configuraciones_ permite modificar algunas configuraciones de la VM.
 
-> Nota: si una VM está en ejecución, algunas configuraciones no se pueden modificar. Debes detener la máquina virtual primero para cambiar la configuración.
+> Nota: si una VM está en ejecución, algunas configuraciones no se pueden modificar. Debes detener la VM primero para cambiar la configuración.
 
 La _Ventana de vista previa_ muestra una pequeña ventana con una muestra de la VM: podemos usar la ventana de vista previa para verificar una VM ha terminado de arrancar.
 
@@ -199,7 +199,7 @@ A continuación se muestra el menú de Herramientas de Máquina de una VM:
 
 El menú herramientas de máquina cuenta con las siguientes opciones:
 
-   * _Detalles_: muestra el panel de Detalles para la máquina virtual seleccionada.
+   * _Detalles_: muestra el panel de Detalles para la VM seleccionada.
    * _Instantáneas_: muestra la herramienta de Instantáneas. Esta herramienta te permite ver y administrar instantáneas para la VM.
    * _Registros_: muestra la herramienta del Visor de Registros. Esta herramienta te permite ver y buscar registros del sistema para la VM.
    * _Actividad_: muestra la página de Actividad de VM del diálogo de Información de Sesión. Este diálogo te permite ver y analizar métricas de rendimiento para la VM.
@@ -214,7 +214,7 @@ El Administrador de VirtualBox incluye asistentes que te permiten completar tare
 
 Haz clic en el botón en la parte inferior de la ventana del asistente para cambiar entre el Modo Guiado y el Modo Experto.
 
-Haz clic en _Nueva_ en la ventana del Administrador de VirtualBox. Se muestra el asistente _Crear Máquina Virtual_ que nos guiará a través de los pasos necesarios para configurar una nueva máquina virtual (VM).
+Haz clic en _Nueva_ en la ventana del Administrador de VirtualBox. Se muestra el asistente _Crear Máquina Virtual_ que nos guiará a través de los pasos necesarios para configurar una nueva VM.
 
 Los siguientes campos están disponibles en esta página del asistente:
 
@@ -266,6 +266,10 @@ A continuación, entramos en el asistente _Crear Máquina Virtual_ en la secció
 Para crear la VM hacemos click en el botón _Finalizar_. La VM se muestra en la lista de máquinas en el lado izquierdo de la ventana del Administrador de VirtualBox, con el nombre que ingresamos en la primera página del asistente.
 
 ![][crear_vm04]
+
+## Ejecutar una VM
+
+# TODO
 
 [oracle_virtualbox_logo]: ./img/oracle_vm_virtualbox/oracle_virtualbox_logo.png "Oracle VirtualBox Logo"
 [virtualbox_manager01]: ./img/oracle_vm_virtualbox/virtualbox_manager01.png "VirtualBox Manager 01"
