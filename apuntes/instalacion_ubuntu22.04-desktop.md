@@ -1,4 +1,4 @@
-# Instalación de Debian 12
+# Instalación de Ubuntu 22.04 Desktop
 
 ![][01]
 ![][02]
