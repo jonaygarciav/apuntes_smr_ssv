@@ -43,7 +43,7 @@ $ lsmod | grep vbox
 vboxguest              57344  0
 ```
 
-## Fedora
+## Sistemas Fedora
 
 ```bash
 sudo dnf update -y
