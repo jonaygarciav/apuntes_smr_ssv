@@ -46,8 +46,8 @@ vboxguest              57344  0
 ## Sistemas Fedora
 
 ```bash
-sudo dnf update -y
-sudo dnf install kernel-devel kernel-headers dkms gcc gcc-c++ make curl wget
+$ sudo dnf update -y
+$ sudo dnf install kernel-devel kernel-headers dkms gcc gcc-c++ make curl wget
 ```
 
 _Menú Dispositivos - Insertar imagen de CD de los complementos del invitado ..._
