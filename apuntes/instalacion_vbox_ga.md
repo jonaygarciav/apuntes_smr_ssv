@@ -10,7 +10,7 @@ $ su -
 # apt install build-essential dkms linux-headers-$(uname -r)
 ```
 
-Montar ISO con las _VirtualBox Guest Additions_:
+Montar imagen de CD con las _VirtualBox Guest Additions_:
 
 ```
 Menú Dispositivos - Insertar imagen de CD de los complementos del invitado ...
@@ -51,7 +51,7 @@ $ sudo apt update
 $ sudo apt install build-essential dkms linux-headers-$(uname -r)
 ```
 
-Montar ISO con las _VirtualBox Guest Additions_:
+Montar imagen de CD con las _VirtualBox Guest Additions_:
 
 ```
 Menú _Dispositivos - Insertar imagen de CD de los complementos del invitado ...
@@ -92,7 +92,7 @@ $ sudo dnf update -y
 $ sudo dnf install kernel-devel kernel-headers dkms gcc gcc-c++ make curl wget
 ```
 
-Montar ISO con las _VirtualBox Guest Additions_:
+Montar imagen de CD con las _VirtualBox Guest Additions_:
 
 ```
 Menú Dispositivos - Insertar imagen de CD de los complementos del invitado ...
