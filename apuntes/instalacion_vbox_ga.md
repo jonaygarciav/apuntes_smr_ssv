@@ -21,7 +21,17 @@ Instalar _VirtualBox Guest Additions_:
 ```bash
 # cd /media/cdrom0
 # sh ./VBoxLinuxAdditions.run --nox11
+```
+
+Añadimos al grupo _vboxsf_ al usuario _alumno_ para que pueda utilizar _Carpetas compartidas_:
+
+```bash
 # usermod -aG vboxsf alumno
+```
+
+Reiniciar el sistema:
+
+```bash
 # reboot
 ```
 
@@ -52,8 +62,18 @@ Instalar _VirtualBox Guest Additions_:
 ```bash
 $ sudo cd /media/alumno/VBox_GAs_7.0.12
 $ sudo sh ./VBoxLinuxAdditions.run --nox11
+```
+
+Añadimos al grupo _vboxsf_ al usuario _alumno_ para que pueda utilizar _Carpetas compartidas_:
+
+```bash
 $ sudo usermod -aG vboxsf alumno
-$ sudo reboot
+```
+
+Reiniciar el sistema:
+
+```bash
+$ reboot
 ```
 
 Comprobar que las _VirtualBox Guest Additions_ se han instalado correctamente:
@@ -83,8 +103,18 @@ Instalar _VirtualBox Guest Additions_:
 ```bash
 $ cd <TODO>
 $ sudo sh ./VBoxLinuxAdditions.run --nox11
+```
+
+Añadimos al grupo _vboxsf_ al usuario _alumno_ para que pueda utilizar _Carpetas compartidas_:
+
+```bash
 $ sudo usermod -aG vboxsf alumno
-$ sudo reboot
+```
+
+Reiniciar el sistema:
+
+```bash
+$ reboot
 ```
 
 Comprobar que las _VirtualBox Guest Additions_ se han instalado correctamente:
