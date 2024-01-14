@@ -11,4 +11,5 @@ Instalación de Sistemas Operativos:
 
 * [Instalación de Debian 12](./apuntes/instalacion_debian12.md)
 * [Instalación de Ubuntu 22.04 Desktop](./apuntes/instalacion_ubuntu22.04-desktop.md)
+* [Instalación de Fedora 39 Workstation](./apuntes/instalacion_ubuntu22.04-desktop.md)
 * [Instalación de Windows 7](./apuntes/instalacion_windows7.md)
