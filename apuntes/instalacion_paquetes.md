@@ -61,7 +61,7 @@ $ sudo dnf localinstall ./<fichero>.deb
 
 ```bash
 $ cd <carpeta/donde/se/encuentra/el/fichero/con/extension/.rpm>
-$ sudo rpm -u ./<fichero>.deb
+$ sudo rpm -U ./<fichero>.deb
 ```
 
 > Nota: Se recomienda utilizar dnf ya que instala las dependencias del fichero .deb en caso de que las tenga.
