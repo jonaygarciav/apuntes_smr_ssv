@@ -1,4 +1,4 @@
-# Instalación de Debian 12
+# Instalación de Fedora 39 Workstation
 
 ![][01]
 ![][02]
