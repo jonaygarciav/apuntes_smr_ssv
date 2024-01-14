@@ -101,7 +101,7 @@ Menú Dispositivos - Insertar imagen de CD de los complementos del invitado ...
 Instalar _VirtualBox Guest Additions_:
 
 ```bash
-$ cd <TODO>
+$ cd /run/media/alumno/VBox_GAs_7.0.12
 $ sudo sh ./VBoxLinuxAdditions.run --nox11
 ```
 
