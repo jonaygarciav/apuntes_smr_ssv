@@ -85,6 +85,14 @@ vboxguest              57344  0
 
 ## Sistemas Fedora
 
+Desinstalar versión de Virtualbox Guest Additions instalado por defecto:
+
+```bash
+$ sudo dnf remove virtualbox-guest-additions -y
+$ sudo reboot7
+```
+
+
 Instalar dependencias:
 
 ```bash
