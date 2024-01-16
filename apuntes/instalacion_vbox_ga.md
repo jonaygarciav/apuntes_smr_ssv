@@ -89,9 +89,8 @@ Desinstalar versión de Virtualbox Guest Additions instalado por defecto:
 
 ```bash
 $ sudo dnf remove virtualbox-guest-additions -y
-$ sudo reboot7
+$ sudo reboot
 ```
-
 
 Instalar dependencias:
 
